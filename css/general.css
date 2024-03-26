@@ -1,0 +1,179 @@
+#link-top{
+    position:fixed;
+    bottom:0.3em;
+    opacity:0.5;
+    left:0.3em;
+    width:3rem;
+    box-sizing: border-box;
+    height:3rem;
+    line-height:3rem;
+    text-align:center;
+    border:5px solid rgb(161, 156, 156);
+      border-top-color:rgb(3, 70, 3);
+    border-radius:50%;
+    background: rgb(157, 153, 153);
+    box-shadow: 0px 0px 3px 5px rgb(19, 178, 19) ;
+  }
+  #link-top:hover{
+    opacity:1;
+  }
+  #triunghi{
+    height:0px;
+    width:0;
+    display:inline-block;
+    border-bottom:1.5rem solid rgb(51, 48, 48);
+    border-left:1rem solid transparent;
+    border-right:1rem solid transparent;
+    vertical-align: top;
+    transform: scale(1,1);
+    transition: all 1s linear;
+  }
+  #link-top:hover>#triunghi{
+    transform: scale(2,2);
+    border-bottom: 1.5rem solid rgb(141, 22, 22);
+  }
+  
+  #timetable th, #timetable td{
+    border: 2px solid black;
+  }
+  #timetable{
+    border-spacing: 2px;
+    border-collapse: collapse;
+  }
+  #timetable th:nth-child(2n){
+    background-color: rgb(142, 130, 223);
+  }
+  #timetable th:nth-child(2n+1){
+    background-color: rgb(104, 157, 198);
+  }
+
+
+
+
+  @media print {
+
+	#absolut{
+		position: absolute;
+		display: inline-block;
+		top:100%;
+		width:20px;
+		height:20px;
+		right:0;
+		overflow: visible;
+	}
+	#absolut::after{
+		content:"Element poziționat absolut pe a doua pagină.Pentru a vedea stilul de printare apăsați Ctrl+P.";
+		position: absolute;
+		font-size:10px;
+		right:0;
+		border:5px double black;
+		width:200px;
+		height:35px;
+		display: inline-block;
+	}
+
+	h1{
+		page-break-after: always;
+		margin-top: 50%;
+		text-align:center;
+		margin-left:1cm;
+	}
+  #grid-pag{
+		font-size: 10px;
+		box-sizing:border-box;
+		page-break-before:always;
+		background-color: white;
+		/*
+			grid-template-rows: calc(100vh - 10px) 100vh 100vh 100vh;*/
+
+		display:block;
+		}
+		html, body {
+        width: 210mm;
+        /* height: 297mm; */
+        /*height: 282mm;*/
+				overflow:visible !important;
+		}
+
+	/*#lst li{
+		page-break-before: always;
+	}*/
+	
+	#grid-pag div:nth-child(5){
+		
+		page-break-before:always;
+	}
+
+	
+		#watermark
+		{
+			display: block;
+			position: fixed;/*apare pe toate paginile*/
+			bottom:0;
+			color:rgba(0,0,0,0.4);
+			right:0;
+		}
+		#watermark::after{
+			
+			opacity:0.4;
+			padding:5px;
+			display: block;
+			background: white;
+			border:2px solid black;
+			border-top-left-radius:10px;
+			border-bottom-left-radius:10px;
+			border-right:none;
+			content:"Copyright Irina Ciocan";
+		}
+
+	#end{
+		page-break-before: always;
+	}
+}
+
+	@page {
+		size: A4 portrait;
+		margin-bottom:2cm;
+		margin-top:2cm;
+		counter-increment: page;
+			
+	}
+	@page:left{
+
+		margin-left:2cm;
+		margin-right:1cm;
+		border-radius: 20cm;
+	}
+	@page:right{
+
+		margin-right:2cm;
+		margin-left:1cm;
+	}
+
+	.container-iframe{
+		display: flex;
+		flex-direction: column;
+		width: 25%;
+	}
+
+	.container-iframe iframe{
+		width: 100%;
+	}
+
+	.taburi-iframe{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.taburi-iframe>a{
+		display: block;
+		border: 1px solid darkgreen;
+		background-color: rgb(111, 243, 115);
+		margin-bottom: 0.4em;
+		padding: 0.2em;
+	}
+
+	.taburi-iframe>a:last-child{
+		margin-bottom: 1;
+	}
