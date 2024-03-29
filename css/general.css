@@ -150,30 +150,44 @@
 		margin-left:1cm;
 	}
 
-	.container-iframe{
+		.container-iframe{
+		position: relative;
 		display: flex;
 		flex-direction: column;
-		width: 25%;
+		width: 45%;
+		height: 0;
 	}
 
 	.container-iframe iframe{
-		width: 100%;
+		position: absolute;
+		bottom: -310px;
+		right: 0;
+		width: 10%;
+		height: 0;
 	}
+	
 
 	.taburi-iframe{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
+		position: absolute;
+		bottom: -310px;
+		right: 0;
+		display: grid;
+		flex-direction: column-reverse;
+		justify-content: flex-end;
 	}
 
 	.taburi-iframe>a{
 		display: block;
 		border: 1px solid darkgreen;
-		background-color: rgb(111, 243, 115);
+		background-color: rgb(77, 176, 80);
 		margin-bottom: 0.4em;
 		padding: 0.2em;
 	}
 
 	.taburi-iframe>a:last-child{
-		margin-bottom: 1;
+		margin-bottom: 0;
+	}
+
+	.taburi-iframe > a:hover {
+		opacity: 0.75;
 	}
