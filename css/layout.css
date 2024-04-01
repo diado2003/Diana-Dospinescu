@@ -20,7 +20,7 @@ html{
 }
 
 #grid-pagina>*{
-    outline: 2px, solid rgb(84, 3, 84);
+    border: 2px, solid rgb(13, 0, 13);
     padding: 0.15 em;
 }
 
@@ -68,7 +68,7 @@ html{
   }
 
 .container {
-    overflow-x: auto; /* Permite scrollbar orizontal doar daca este necesar */
+    overflow-x: auto; 
   }
 
 body {
@@ -89,7 +89,7 @@ body {
                              "fig3 products"
                              "interesting-facts interesting-facts"
                              "questions questions"
-                             "announcements announcements";                             
+                             ;                             
     }
     
 }
