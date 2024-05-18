@@ -1,0 +1,103 @@
+html{
+    font-size: 17px;
+    font-family: "Squada One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#grid-pagina{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "welcome welcome welcome"
+                         "promotions promotions time-table"
+                         "fig1 products products"
+                         "fig2 products products"   
+                         "fig3 products products"
+                         "interesting-facts interesting-facts interesting-facts"
+                         "questions questions questions"
+                         "announcements announcements announcements";                             
+}
+
+#grid-pagina>*{
+    border: 2px, solid rgb(13, 0, 13);
+    padding: 0.15 em;
+}
+
+#grid-pagina>figure{
+    margin: 0;
+}
+
+#welcome{
+    grid-area: welcome;
+}
+#promotions{
+    grid-area: promotions;
+}
+#interesting-facts{
+    grid-area: interesting-facts;
+}
+#products{
+    grid-area: products;
+}
+#fig1{
+    grid-area: fig1;
+} 
+#fig2{
+    grid-area: fig2;
+}
+#fig3{
+    grid-area: fig3;
+}
+#announcements{
+    grid-area: announcements;
+}
+#time-table{
+    grid-area: time-table;
+}
+#questions{
+    grid-area: questions;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+      'header header header'
+      'menu content sidebar'
+      'footer footer footer';
+  }
+
+.container {
+    overflow-x: auto; 
+  }
+
+body {
+    transition: font-size 0.3s ease;
+  }
+
+@media screen and (max-width:1200px){
+    html{
+        font-size: 15px;
+    }
+    #grid-pagina{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "welcome welcome"
+                             "promotions promotions"
+                             "time-table time-table"
+                             "fig1 products"
+                             "fig2 products"   
+                             "fig3 products"
+                             "interesting-facts interesting-facts"
+                             "questions questions"
+                             ;                             
+    }
+    
+}
+@media screen and (max-width:800px) {
+    html{
+        font-size: 12px;
+    }
+    #grid-pagina{
+        display: block;                            
+    }
+}

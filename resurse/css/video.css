@@ -1,0 +1,27 @@
+::cue{
+    background: var(--accent2-color);
+    color:var(--neutral-color);
+
+    font-size: 1rem;
+  }
+@media screen and (max-width:1000px){
+  ::cue{
+  font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width:1000px){
+  #container-video img{
+    top:50px;
+  }
+}
+
+video{
+  margin:0;
+  padding:0;
+  -webkit-transform: translateZ(0);
+  transition: all 0.2s linear;
+  width:50%;
+  border-radius: 10px;
+  height:auto;
+}

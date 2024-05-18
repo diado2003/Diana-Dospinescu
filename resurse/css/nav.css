@@ -1,0 +1,99 @@
+@charset "UTF-8";
+nav {
+  --inatltime-meniu: 2.5em;
+  --latime-buton: 150px;
+  height: var(--inatltime-meniu);
+  background-color: var(--color-menu);
+}
+
+#hamburger, #ch-menu {
+  display: none;
+}
+
+#acasa-mediu {
+  display: none;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu, .menu ul {
+  list-style-type: none;
+  padding: 0%;
+  margin: 0;
+  background-color: var(--color-menu);
+}
+
+.menu li {
+  border: 1.5px solid var(--lighter-color-menu);
+  width: var(--latime-buton);
+  height: var(--inatltime-meniu);
+  text-align: center;
+  position: relative;
+}
+
+.menu li div, .menu li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  line-height: var(--inatltime-meniu);
+  color: var(--text-menu-color);
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 1s linear;
+}
+
+.menu li:hover > div, .menu li:hover > a {
+  background-color: rgb(24, 84, 24);
+  color: var(--selected-text-color);
+}
+
+.menu li:hover > ul {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  animation: animatie_submeniu 1s linear 1 forwards;
+  transform-origin: center top;
+  top: 100%;
+  left: 0;
+}
+
+/*submeniu*/
+.menu ul {
+  display: none;
+  opacity: 0;
+  transform: scaleY(0);
+  background-color: var(--color-menu);
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menu ul li {
+  width: 100%; /* Lățimea elementelor submeniului să fie 100% */
+  height: auto; /* Înălțimea să se ajusteze automat la conținut */
+  text-align: left; /* Afișează textul la stânga */
+  border: none; /* Elimină bordura pentru elementele submeniului */
+}
+
+.menu ul li a {
+  color: var(--text-menu-color); /* Culoarea textului submeniului */
+  padding: 10px 20px; /* Padding pentru elementele submeniului */
+  display: block; /* Afișează elementele submeniului ca blocuri */
+  transition: none; /* Anulează tranziția pentru elementele submeniului */
+}
+
+.menu ul li:hover a {
+  background-color: transparent; /* Elimină culoarea de fundal la hover */
+  color: var(--selected-text-color); /* Culoarea textului la hover */
+}
+
+@keyframes animatie_submeniu {
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

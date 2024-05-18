@@ -1,0 +1,38 @@
+/* Definirea culorilor pentru link-uri printr-o variabilă */
+:root {
+    --visited-link-color: #8855FF; /* Schimbă culoarea conform preferințelor tale */
+    --hover-external-link-color: #FF5555; /* Culoare pentru hover pe linkuri externe */
+}
+
+/* Stil pentru linkurile vizitate */
+a:visited {
+    color: var(--visited-link-color);
+}
+
+/* Stil pentru linkuri externe cu pseudoelement ::before pentru simbol */
+a[href^="http"]:not([href*="//tudomeniu.com"])::before {
+    content: "⮳ ";
+    font-size: 150%; /* Mărimea este cu 50% mai mare decât fontul linkului */
+    vertical-align: middle; /* Aliniază simbolul vertical cu textul linkului */
+    margin-right: 0.3em; /* Spațiu între simbol și text */
+}
+
+/* Schimbarea culorii simbolului la hover pe linkuri externe */
+a[href^="http"]:not([href*="//tudomeniu.com"]):hover::before {
+    color: var(--hover-external-link-color);
+}
+
+/* Stil pentru efectul de pata de culoare la hover pe linkurile din <main> */
+main a {
+    position: relative;
+    display: inline-block;
+    background: radial-gradient(circle, #FF0000 0%, #FF0000 40%, transparent 80%, transparent 100%);
+    background-size: 0% 0%;
+    background-position: center;
+    transition: background-size 0.5s ease-in-out;
+}
+
+/* Extinderea petei de culoare la hover */
+main a:hover {
+    background-size: 100% 100%;
+}

@@ -1,0 +1,63 @@
+{
+    "cale_galerie":"resurse/imagini/galerie",
+    "imagini": [
+        {
+            "fisier":"briose-frisca.png",
+            "descriere":"Brioșe",
+            "luni":["martie","februarie","noiembrie","aprilie"]
+        },
+        {
+            "fisier":"clatite.png",
+            "descriere":"Clătite cu dulceață",
+            "luni":["ianuarie","februarie","iunie"]
+
+        },
+        {
+            "fisier":"gogosi.png",
+            "descriere":"Gogoși glazurate",
+            "luni":["ianuarie","noiembrie","iunie","martie","aprilie"]
+        },
+        {
+            "fisier":"tort-scortisoara.png",
+            "descriere":"Tort cu scorțisoară",
+
+            "luni":["noiembrie","aprilie"]
+        },
+        {
+            "fisier":"prajitura-ciocolata.png",
+            "descriere":"Prăjitură cu ciocolată"
+        },
+        {
+            "fisier":"tarta-afine.png",
+            "descriere":"Tartă cu afine"
+        },
+        {
+            "fisier":"tort-trandafiri.png",
+            "descriere":"Tort special"
+        },
+        {
+            "fisier":"cake.jpg",
+            "descriere":"cake"
+        },
+        {
+            "fisier":"cake2.jpg",
+            "descriere":"cake2"
+        },
+        {
+            "fisier":"cake3.jpg",
+            "descriere":"cake3"
+        },
+		{
+            "fisier":"cookie 1.jpg",
+            "descriere":"cookie"
+        },
+		{
+            "fisier":"cupcake 1.jpg",
+            "descriere":"cake3"
+        },
+		{
+            "fisier":"cookie 2.jpeg",
+            "descriere":"cake3"
+        }
+    ]
+}

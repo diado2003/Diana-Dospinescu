@@ -1,0 +1,25 @@
+
+header {
+    background-color: var(--accent2-color);
+}
+
+h2{
+    background-color: var(--accent-color);
+}
+
+hr{
+    border: none;
+    height: 20px;
+    background-image: radial-gradient(circle at 10% 20%, #ff6384 10%, transparent 20%),
+                      radial-gradient(circle at 50% 80%, #36a2eb 15%, transparent 30%),
+                      radial-gradient(circle at 90% 50%, #cc65fe 15%, transparent 30%);
+    background-size: 100px 20px; 
+    background-repeat: repeat-x;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    margin: 20px 0;
+}
+
+footer{
+    background-color: var(--accent2-color) ;
+}
+

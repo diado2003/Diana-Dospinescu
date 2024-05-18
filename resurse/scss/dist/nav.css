@@ -1,0 +1,7 @@
+.menu li:hover > ul {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  animation: animatie_submeniu 1s linear 1 forwards;
+  transform-origin: center top;
+}
